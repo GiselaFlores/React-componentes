@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 
+
+function Persona(props) {
+  return(
+    <div className="persona"
+         style={{backgroundColor: props.color}}
+    >
+      <h3>Nombre: {props.nombre}</h3>
+      <p>Edad: {props.edad} </p>
+    </div>
+  );
+}
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hola mundo</h1> 
+      <Persona nombre="Gisela" edad="25" color="red"/>
+      <Persona nombre="Pedro" edad="15" color="green"/>
+      <Persona nombre="María" edad="29" color="blue"/>
+      <Persona nombre="María" edad="29"/>
     </div>
   );
 }
