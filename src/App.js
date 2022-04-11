@@ -1,14 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
 
-function Persona(props) {
+function Contador() {
+  const [cont, setCont]= useState(0);
+
   return(
-    <div className="persona"
-         style={{backgroundColor: props.color}}
-    >
-      <h3>Nombre: {props.nombre}</h3>
-      <p>Edad: {props.edad} </p>
+    <div className='text-center mt-4'>
+        <h1>CONTADOR</h1>
+        <p>{Contador}</p>
+        <button onClick={sumaClick} className='btn btn-primary'>Agregar</button>
     </div>
   );
 }
@@ -16,11 +16,7 @@ function Persona(props) {
 function App() {
   return (
     <div className="App">
-      <h1>Hola mundo</h1> 
-      <Persona nombre="Gisela" edad="25" color="red"/>
-      <Persona nombre="Pedro" edad="15" color="green"/>
-      <Persona nombre="María" edad="29" color="blue"/>
-      <Persona nombre="María" edad="29"/>
+      <Contador/>
     </div>
   );
 }
